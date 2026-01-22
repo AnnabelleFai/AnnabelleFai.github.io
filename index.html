@@ -107,15 +107,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-page="about">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-page="resume">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-page="portfolio">Portfolio</button>
           </li>
 
         </ul>
@@ -186,23 +186,7 @@
                 <h4 class="h4 service-item-title">Advocacy & Organizing</h4>
 
                 <p class="service-item-text">
-                  Lorem ipsom
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/research_writing.png" alt="research writing icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Research & Writing</h4>
-
-                <p class="service-item-text">
-                  qui dolor set amit
+                  Supporting community efforts to improve systems and amplify the voices of those most affected.
                 </p>
               </div>
 
@@ -212,20 +196,6 @@
 
         </section>
 
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              
-            </button>
-
-
-          </section>
-
-        </div>
 
       </article>
 
@@ -356,15 +326,15 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Competency 1</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Competency 2</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Competency 3</button>
             </li>
 
           </ul>
@@ -388,15 +358,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Competency 1</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Competency 2</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Competency 3</button>
               </li>
 
             </ul>
@@ -405,7 +375,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="competency 1">
               <a href="#">
 
                 <figure class="project-img">
@@ -423,7 +393,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="competency 1">
               <a href="#">
 
                 <figure class="project-img">
@@ -441,25 +411,18 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="competency 2">
+              <button class="navbar-link" data-nav-link data-page="artifact-template">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <h3 class="project-title">Artifact Template</h3>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
+                <p class="project-category">Competency 1</p>
 
               </a>
+			  
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="competency 3">
               <a href="#">
 
                 <figure class="project-img">
@@ -477,7 +440,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="competency 2">
               <a href="#">
 
                 <figure class="project-img">
@@ -495,7 +458,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="competency 2">
               <a href="#">
 
                 <figure class="project-img">
@@ -513,7 +476,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="competency 1">
               <a href="#">
 
                 <figure class="project-img">
@@ -531,7 +494,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="competency 3">
               <a href="#">
 
                 <figure class="project-img">
@@ -549,7 +512,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="competency 1">
               <a href="#">
 
                 <figure class="project-img">
@@ -573,10 +536,31 @@
 
       </article>
 
+<!--
+ - artifact pages
+-->
 
+<!--
+ - artifcat template page
+-->
 
+<article class="artifact" data-page="artifact-template">
+   <header>
+          <h2 class="h2 article-title">Artifact Template</h2>
+		  <h4 class="h4 article-title">Competency 1</h4>
+        </header>
 
+        <section class="about-text">
 
+   <object data="./assets/images/Comprehensive Case Management Plan.pdf"type="application/pdf"width="100%" height="500px">
+   </object>
+             <p>
+          This is descriptive text for the assignment and how it pertains to the competency I have associated with it ☻
+		  It will be in essay style, so likely a few paragraphs
+
+          </p>
+        </section>
+</article>
   <!--
     - custom js link
   -->
