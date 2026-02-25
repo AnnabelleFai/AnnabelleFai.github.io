@@ -17,6 +17,10 @@
 
 :root {
 
+color-scheme: dark;
+	
+  --navbar-bg: hsla(240, 1%, 17%, 0.75);
+  --overlay-bg: hsl(0, 0%, 5%);
   /**
    * colors
    */
@@ -110,7 +114,75 @@
   --transition-2: 0.5s ease-in-out;
 
 }
+/*-----------------------------------*\
+  #LIGHT MODE (SYSTEM PREFERENCE)
+\*-----------------------------------*/
 
+@media (prefers-color-scheme: light) {
+
+  :root {
+
+    /* Tell browser we support both themes */
+    color-scheme: light;
+--navbar-bg: hsl(0, 0%, 100%);
+--overlay-bg: hsl(0, 0%, 0%);
+    /* Core neutrals */
+    --smoky-black: hsl(210, 50%, 60%);
+    --eerie-black-1: hsl(0, 0%, 100%);
+    --eerie-black-2: hsl(0, 0%,96%);
+    --onyx: hsl(0, 0%, 90%);
+    --jet: hsl(0, 0%, 85%);
+
+    /* Text colors */
+    --white-1: hsl(0, 0%, 0%);
+    --white-2: hsl(0, 0%, 0%);
+    --light-gray: hsl(0, 0%, 0%);
+    --light-gray-70: hsl(210, 100%, 20%);
+
+    /* Shadows (so they’re softer in light mode) */
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.08);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.08);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.08);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.06);
+    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.10);
+
+    /* Adjust gradient backgrounds for light mode */
+    --bg-gradient-onyx: linear-gradient(
+      to bottom right,
+      hsl(0, 0%, 100%) 0%,
+      hsl(0, 0%, 95%) 100%
+    );
+
+    --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(0, 0%, 100%, 0.6) 0%,
+      hsla(0, 0%, 95%, 0.6) 100%
+    ), hsl(0, 0%, 98%);
+
+    --border-gradient-onyx: linear-gradient(
+      to bottom right,
+      hsl(0, 0%, 85%) 0%,
+      hsla(0, 0%, 85%, 0) 50%
+    );
+
+  }
+
+  /* Fix navbar glass color */
+  .navbar {
+  background: var(--navbar-bg);
+}
+
+  /* Fix overlay darkness */
+  .overlay {
+  background: var(--overlay-bg);
+}
+
+  /* Fix embedded map inversion */
+  .mapbox iframe {
+    filter: grayscale(0) invert(0);
+  }
+
+}
 
 
 
@@ -459,7 +531,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -641,7 +713,7 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 5%);
+  background: var(--overlay-bg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -877,10 +949,6 @@ main {
 
 .filter-list { display: none; }
 
-.filter-select-box {
-  position: relative;
-  margin-bottom: 25px;
-}
 
 .filter-select {
   background: var(--eerie-black-2);
@@ -1879,4 +1947,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+.pdf-container {
+  display: flex;
+  gap: 20px;              /* space between PDFs */
+}
+
+.pdf-container object {
+  width: 50%;
+  height: 500px;
 }
